@@ -23,9 +23,15 @@
 	<dependencies>
 	    <dependency>
 			<groupId>cc.wanforme.nukkit</groupId>
-			<artifactId>wannukkit-spring-boot-starter</artifactId>
+			<artifactId>pnx-spring-boot-starter</artifactId>
 			<version>0.0.1</version>
 	    </dependency>
+	    
+	    <dependency>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-starter-web</artifactId>
+        	<version>2.7.2</version>
+ 		</dependency>
 	</dependencies>
 	
 	<build>

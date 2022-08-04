@@ -32,6 +32,7 @@ bin/
 
 
 # nukkit
+nukkit/
 command_data/
 logs/
 players/
