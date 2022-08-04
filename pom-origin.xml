@@ -1,0 +1,115 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>cc.wanforme.nukkit</groupId>
+	<artifactId>StarterDemo</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>StarterDemo</name>
+	<url>http://maven.apache.org</url>
+
+    <repositories>
+        <repository>
+            <id>wannukit-repo-release</id>
+            <url>http://www.repo.wanforme.cc/repository/maven-releases/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>wannukit-repo-snapshot</id>
+            <url>http://www.repo.wanforme.cc/repository/maven-snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<wannukkit-spring-boot-starter.version>1.0.0-SNAPSHOT</wannukkit-spring-boot-starter.version>
+		<spring-boot-thin-layout.version>1.0.25.RELEASE</spring-boot-thin-layout.version>
+		<spring-boot-thin-maven-plugin.version>1.0.25.RELEASE</spring-boot-thin-maven-plugin.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>cc.wanforme.nukkit</groupId>
+			<artifactId>wannukkit-spring-boot-starter</artifactId>
+			<version>${wannukkit-spring-boot-starter.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<!-- 默认源代码和资源文件目录配置 -->
+		<resources>
+			<resource>
+				<directory>${project.basedir}/src/main/java</directory>
+			</resource>
+			<resource>
+				<directory>${project.basedir}/src/main/resources</directory>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>${project.basedir}/src/test/java</directory>
+			</testResource>
+			<testResource>
+				<directory>${project.basedir}/src/test/resources</directory>
+			</testResource>
+		</testResources>
+
+		<!-- <outputDirectory>${project.basedir}/nukkit</outputDirectory> <testOutputDirectory>${project.basedir}/nukkitTest</testOutputDirectory> -->
+
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<!-- <version>${spring-boot-maven-plugin.version}</version> -->
+				<configuration>
+					<!-- Main Class. 指定主方法 -->
+					<mainClass>cc.wanforme.nukkit.springDemo.StarterDemo</mainClass>
+					<executable>true</executable>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>org.springframework.boot.experimental</groupId>
+						<artifactId>spring-boot-thin-layout</artifactId>
+						<version>${spring-boot-thin-layout.version}</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<plugin>
+                <groupId>org.springframework.boot.experimental</groupId>
+                <artifactId>spring-boot-thin-maven-plugin</artifactId>
+                <version>${spring-boot-thin-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <!--在编译时下载依赖包 -->
+                        <id>resolve</id>
+                        <goals>
+                            <goal>resolve</goal>
+                        </goals>
+                        <inherited>false</inherited>
+                    </execution>
+                </executions>
+            </plugin>
+		</plugins>
+	</build>
+</project>
