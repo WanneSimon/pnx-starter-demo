@@ -1,4 +1,5 @@
 # StarterDemo
+**这是文档是以前 `wannukkit-springboot-starter` 的旧文档**
  wannukkit-springboot-starter 的一个使用demo，推荐使用 demo 搭建你自己的项目。
 
 *****已更换成 wannukkit-springboot 搭建。原 pom.xml 更名为 pom-origin.xml *****
