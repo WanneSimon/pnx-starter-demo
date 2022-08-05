@@ -32,23 +32,23 @@ bin/
 
 
 # nukkit
-nukkit/
-command_data/
-logs/
-players/
-plugins/
-resource_packs/
-services/
-worlds/
-banned-ips.json
-banned-players.json
-nukkit.yml
-ops.txt
-server.properties
-white-list.txt
+/nukkit/
+/command_data/
+/logs/
+/players/
+/plugins/
+/resource_packs/
+/services/
+/worlds/
+/banned-ips.json
+/banned-players.json
+/nukkit.yml
+/ops.txt
+/server.properties
+/white-list.txt
 
 # others
-test/
-nsplugins/
-config/
-log4j2-spring.xml
+/test/
+/nsplugins/
+/config/
+/log4j2-spring.xml

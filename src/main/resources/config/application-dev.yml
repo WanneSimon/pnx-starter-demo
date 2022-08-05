@@ -1,0 +1,26 @@
+logging:
+    level:
+        ROOT: info 
+        cc.wanforme.nukkit: info
+        
+nukkit:
+   spring:
+    # 启用 nukkit 相关模块
+    # enable nukkit module
+    enable: true
+    # 是否一同启动 nukkit
+    # run nukkit after launch app
+    start-nukkit: true
+    # 使用 spring 编写的 nukkit 插件位置 支持 （支持jar 和 字节码形式的）
+    # plugins' location written with spring ( jar and classes supported )
+    # 需要注意的是，当 maven 工程打包后，会在 target 目录下读取到两个你的插件
+    nukkit-spring-plugin-location: nsplugins,target
+    # 监听 nukkit 启动的间隔（ms）
+    listenTick: 500
+    # 监听 nukkit 启动的超时时间（ms）
+    listenTimeOut: 10000
+    # 需要在 nukkit 启动前保存到外部的文件夹,(如果已存在，会覆盖原来的)
+    # 默认 plugins 文件夹，并且starter会在此之前保存'plugins/PMPlus.jar',
+    # (如果你的项目中也有一个 'plugins/PMPlus.jar', 则会覆盖 starter 中的 PMPlus.jar)
+    # 文件夹需要以 '/' 结尾
+    savingFilesBeforeNukkit: plugins/, config/, log4j2-spring.xml

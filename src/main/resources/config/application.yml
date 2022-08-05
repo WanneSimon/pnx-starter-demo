@@ -1,0 +1,26 @@
+server:
+  port: 8050 #web端口
+  servlet:
+    context-path: /nk
+    application-display-name: StarterDemo
+  shutdown: graceful # 优雅关机(勿强制杀死进程)
+
+spring:
+  main:
+    web-environment: true # web环境
+  profiles:
+    active: dev
+  application:
+    name: StarterDemo
+#  cloud:
+#    config:
+#      enabled: false
+
+# 日志文件位置
+logging:
+  config: classpath:log4j2-spring.xml # 指定日志配置文件
+  level:
+    cn.jay.repository: trace
+ 
+ 
+ 
