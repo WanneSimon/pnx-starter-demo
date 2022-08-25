@@ -7,7 +7,8 @@ server:
 
 spring:
   main:
-    web-environment: true # web环境
+    # web-environment: false # web环境
+    web-application-type: servlet # none, servlet, reactive
   profiles:
     active: dev
   application:
