@@ -1,14 +1,7 @@
-server:
-  port: 8050 #web端口
-  servlet:
-    context-path: /nk
-    application-display-name: StarterDemo
-  shutdown: graceful # 优雅关机(勿强制杀死进程)
-
 spring:
   main:
     # web-environment: false # web环境
-    web-application-type: servlet # none, servlet, reactive
+    web-application-type: none # none, servlet, reactive
   profiles:
     active: dev
   application:
@@ -16,6 +9,14 @@ spring:
 #  cloud:
 #    config:
 #      enabled: false
+
+# web 
+#server:
+#  port: 8050 #web端口
+#  servlet:
+#    context-path: /nk
+#    application-display-name: StarterDemo
+#  shutdown: graceful # 优雅关机(勿强制杀死进程)
 
 # 日志文件位置
 logging:

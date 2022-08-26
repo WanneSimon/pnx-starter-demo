@@ -23,4 +23,5 @@ nukkit:
     # 默认 plugins 文件夹，并且starter会在此之前保存'plugins/PMPlus.jar',
     # (如果你的项目中也有一个 'plugins/PMPlus.jar', 则会覆盖 starter 中的 PMPlus.jar)
     # 文件夹需要以 '/' 结尾
-    savingFilesBeforeNukkit: plugins/, config/, log4j2-spring.xml
+    # 不建议保存SpringBoot配置 config/ ,特别是对开发影响很大 
+    savingFilesBeforeNukkit: plugins/, log4j2-spring.xml

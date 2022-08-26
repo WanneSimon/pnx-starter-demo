@@ -26,7 +26,7 @@
         <java.version>17</java.version>
         
         <!--<powernukkitx.version>1.6.0.0-PNX</powernukkitx.version> -->
-        <powernukkitx.version>1.19.10-r1</powernukkitx.version>
+        <powernukkitx.version>1.19.21-r1</powernukkitx.version>
     </properties>
     
     <dependencies>
