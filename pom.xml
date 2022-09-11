@@ -14,6 +14,20 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     
+    <repositories>
+	    <repository>
+	        <id>ossrh</id>
+	        <name>ossrh</name>
+	        <url>https://s01.oss.sonatype.org/content/repositories/releases/</url>
+	        <releases>
+	            <enabled>true</enabled>
+	        </releases>
+	        <snapshots>
+	            <enabled>false</enabled>
+	        </snapshots>
+	    </repository>
+	</repositories>
+    
     <properties>
         <!-- 文件拷贝时的编码 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -26,7 +40,7 @@
         <java.version>17</java.version>
         
         <!--<powernukkitx.version>1.6.0.0-PNX</powernukkitx.version> -->
-        <powernukkitx.version>1.19.21-r1</powernukkitx.version>
+        <powernukkitx.version>1.19.21-r3</powernukkitx.version>
     </properties>
     
     <dependencies>
@@ -41,13 +55,13 @@
 			</exclusions>
 		</dependency>
 		
-        <dependency>
-            <groupId>cc.wanforme.nukkit</groupId>
-            <artifactId>pnx-spring-boot-starter</artifactId>
-            <version>0.0.1</version>
-        </dependency>
+		<dependency>
+		  <groupId>cc.wanforme.nukkit</groupId>
+		  <artifactId>pnx-spring-boot-starter</artifactId>
+		  <version>0.1.0</version>
+		</dependency>
         
-        <!-- 引入 web 依赖则表示是 web 环境，同时需要修改 spring.main.web-environment -->
+        <!-- 引入 web 依赖则表示是 web 环境，同时需要修改 spring.main.web-application-type -->
         <!--
         <dependency>
             <groupId>org.springframework.boot</groupId>
