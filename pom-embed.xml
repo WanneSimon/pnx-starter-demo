@@ -14,6 +14,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     
+    <!-- repositories 可选. This's optional -->
     <repositories>
 	    <repository>
 	        <id>ossrh</id>
@@ -33,10 +34,7 @@
         <maven.compiler.compilerVersion>17</maven.compiler.compilerVersion>
         <java.version>17</java.version>
         
-        <!--<powernukkitx.version>1.6.0.0-PNX</powernukkitx.version> -->
         <powernukkitx.version>1.19.30-r1</powernukkitx.version> 
-        <spring-boot-thin-layout.version>1.0.25.RELEASE</spring-boot-thin-layout.version>
-        <spring-boot-thin-maven-plugin.version>1.0.28.RELEASE</spring-boot-thin-maven-plugin.version>
     </properties>
     
     <dependencies>
@@ -92,7 +90,7 @@
                      </includes>
                 </configuration>
             </plugin>
-            <!-- 打包时，将 provided 除外的三方依赖放在 libs 下。 -->
+          <!-- 打包时，将 provided 除外的三方依赖放在 libs 下。 -->
 		  <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -111,7 +109,6 @@
                     </execution>
                 </executions>
             </plugin>
-            
         </plugins>
     </build>
 </project>
