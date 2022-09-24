@@ -51,15 +51,15 @@ c. 将打包生成的 `target/libs`  复制到 `pnx-1.19.30-r1/libs-app` ，
 
 将 `target/pnx-starter-demo-1.0-SNAPSHOT.jar` 复制到 `pnx-1.19.30-r1/pnx-starter-demo-1.0-SNAPSHOT.jar`   
 
-![compile](doc-imgs/compile-1.bmp)
+![compile](doc-imgs/compile-1.jpg)
 
 d. 从  [Releases · PowerNukkitX/PowerNukkitX · GitHub](https://github.com/PowerNukkitX/PowerNukkitX/releases)  下载 `libs.tar.gz` 和 `powernukkitx.jar` 。  
 
 将 `libs.tar.gz` 解压后得到的 `libs` 文件夹复制到 `pnx-1.19.30-r1/libs` ，  
 
 将 `powernukkitx.jar` 复制到 `pnx-1.19.30-r1/powernukkitx.jar`  
-![compile](doc-imgs/download-pnx.bmp)
-![compile](doc-imgs/copy-pnx.bmp)
+![compile](doc-imgs/download-pnx.jpg)
+![compile](doc-imgs/copy-pnx.jpg)
 
 e. 启动脚本  
 
@@ -88,7 +88,7 @@ org.springframework.boot.loader.JarLauncher
 
 ```
 
-![compile](doc-imgs/bat.bmp)
+![compile](doc-imgs/bat.jpg)
 
 更换 `pnx` 核心只需要更换 `pnx-1.19.30-r1/powernukkitx.jar` 和 `pnx-1.19.30-r1/libs` 即可。
 
