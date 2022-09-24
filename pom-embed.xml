@@ -81,33 +81,7 @@
                     <!-- Main Class. 指定主方法 -->
                     <mainClass>cc.wanforme.nukkit.springDemo.AppDemo</mainClass>
                     <executable>true</executable>
-                    <!-- 去除 spring-boot 打包时的所有依赖 -->
-                     <includes>
-                     	<include>
-                     		<groupId>nothing</groupId>
-                     		<artifactId>nothing</artifactId>
-                     	</include>
-                     </includes>
                 </configuration>
-            </plugin>
-          <!-- 打包时，将 provided 除外的三方依赖放在 libs 下。 -->
-		  <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>copy-dependencies</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <skip>false</skip>
-                            <outputDirectory>${project.build.directory}/libs</outputDirectory>
-                            <excludeScope>provided</excludeScope>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
