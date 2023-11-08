@@ -11,8 +11,14 @@
 
 
 ### 环境
+demo 2.0-SNAPSHOT
 
-`JDK17+` `SpringBoot 2.7`
+`JDK17+` `SpringBoot 3.1.5`
+
+>测试最低环境:  
+pnx-spring-boot-starter 0.2.x  
+spring-boot: 3.1.5  
+PowerNukkitX: 1.20.40-r1  
 
 ### 编译和运行
 
