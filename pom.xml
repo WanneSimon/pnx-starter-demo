@@ -78,7 +78,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration> 
+                <configuration>
+                    <!-- 修改打包后可执行jar的名字，让 maven install 正常工作 -->
+                    <classifier>exec</classifier>
                     <!-- Main Class. 指定主方法 -->
                     <mainClass>cc.wanforme.nukkit.springDemo.AppDemo</mainClass>
                     <executable>true</executable>

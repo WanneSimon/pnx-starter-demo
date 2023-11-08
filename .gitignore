@@ -19,6 +19,9 @@
 *.tar.gz
 *.rar
 
+# idea
+.idea/
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
@@ -42,10 +45,12 @@ bin/
 /worlds/
 /banned-ips.json
 /banned-players.json
-/nukkit.yml
 /ops.txt
 /server.properties
 /white-list.txt
+
+/pnx/*
+
 
 # others
 /test/
