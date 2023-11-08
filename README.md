@@ -1,15 +1,10 @@
 # pnx-starter-demo
 
-
-
 `pnx-spring-boot-starter` 有两种方式进行开发，区别在于一个是嵌入式，一个是非嵌入式。  
-
-嵌入式即打包后，所有三方依赖存在于 `jar` 包内部，更新 `pnx` 核心的时候，就要重新打包。  
-
+嵌入式即打包后，所有三方依赖存在于 `jar` 包内部，更新 `pnx` 核心的时候，就要重新打包。
 非嵌入式则是把所有依赖放在 `jar` 包外部，启动时指定三方依赖的位置，需要更换 `pnx` 核心时，就只需要更新 `pnx` 依赖。
 
-
-
+**注：所有图片中的 `pnx-starter-demo-1.0-SNAPSHOT.jar` 均指代 `pnx-starter-demo-1.0-SNAPSHOT-exec.jar`**
 ### 环境
 demo 0.1  
 
@@ -31,31 +26,23 @@ PowerNukkitX: 1.6.0.0-PNX
 mvn clean package
 # 运行
 cd target
-java -jar --add-opens java.base/java.lang=ALL-UNNAMED pnx-starter-demo-1.0-SNAPSHOT.jar
+java -jar --add-opens java.base/java.lang=ALL-UNNAMED pnx-starter-demo-1.0-SNAPSHOT-exec.jar
 ```
 
-
-
-
-
 #### 非嵌入式 Non-Embed
-
 非嵌入式参考 `pom.xml` 配置  
-
-  
-a. 创建一个空文件夹 ，例如： `pnx-1.19.30-r1`  
-
+ 
+a. 创建一个空文件夹 ，例如： `pnx-1.19.30-r1`
 `pnx-1.19.30-r1` 下面继续创建文件夹 `libs-app` 和 `libs` 。  
 
-b. 打包  
-
+b. 打包
 ```
 mvn clean package
 ```
 
 c. 将打包生成的 `target/libs`  复制到 `pnx-1.19.30-r1/libs-app` ，  
 
-将 `target/pnx-starter-demo-1.0-SNAPSHOT.jar` 复制到 `pnx-1.19.30-r1/pnx-starter-demo-1.0-SNAPSHOT.jar`   
+将 `target/pnx-starter-demo-1.0-SNAPSHOT-exec.jar` 复制到 `pnx-1.19.30-r1/pnx-starter-demo-1.0-SNAPSHOT-exec.jar`   
 
 ![compile](doc-imgs/compile-1.jpg)
 
@@ -77,7 +64,7 @@ e. 启动脚本
 @rem 将下面的 JAVA17 修改为你 java17 的路径
 @set JAVA17="C:\Program Files\Java\jdk-17.0.2\bin\java.exe"
 %JAVA17%  --add-opens java.base/java.lang=ALL-UNNAMED ^
--cp ./libs/*;./libs-app/*;./powernukkitx.jar;./pnx-starter-demo-1.0-SNAPSHOT.jar ^
+-cp ./libs/*;./libs-app/*;./powernukkitx.jar;./pnx-starter-demo-1.0-SNAPSHOT-exec.jar ^
 org.springframework.boot.loader.JarLauncher
 PAUSE
 
@@ -87,9 +74,9 @@ PAUSE
 
 ```sehll
 # 将下面的 JAVA17 修改为你 java17 的路径
-set JAVA17="C:\Program Files\Java\jdk-17.0.2\bin\java.exe"
+JAVA17="C:\Program Files\Java\jdk-17.0.2\bin\java.exe"
 $JAVA17  --add-opens java.base/java.lang=ALL-UNNAMED \
--cp ./libs/*:./libs-app/*:./powernukkitx.jar:./pnx-starter-demo-1.0-SNAPSHOT.jar \
+-cp ./libs/*:./libs-app/*:./powernukkitx.jar:./pnx-starter-demo-1.0-SNAPSHOT-exec.jar \
 org.springframework.boot.loader.JarLauncher
 
 ```
