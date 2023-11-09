@@ -37,9 +37,6 @@
         <powernukkitx.version>1.20.40-r1</powernukkitx.version>
         <spring-boot-thin-layout.version>1.0.25.RELEASE</spring-boot-thin-layout.version>
         <spring-boot-thin-maven-plugin.version>1.0.28.RELEASE</spring-boot-thin-maven-plugin.version>
-
-        <!-- @see spring-boot-starter-log4j2 -->
-        <log4j2.version>2.17.1</log4j2.version>
     </properties>
     
     <dependencies>
@@ -73,16 +70,25 @@
             <artifactId>powernukkitx</artifactId>
             <version>${powernukkitx.version}</version>
             <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-slf4j-impl</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-slf4j18-impl</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
-
-        <!-- The POM for com.dfsek.terra:Terra:jar:6.0.0 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details -->
-        <!--<dependency>
-            <groupId>com.dfsek.terra</groupId>
-            <artifactId>Terra</artifactId>
-            <version>6.2.0</version>
-        </dependency>
-        -->
-
     </dependencies>
     
     <build>
