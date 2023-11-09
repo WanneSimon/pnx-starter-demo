@@ -125,6 +125,7 @@
                         <configuration>
                             <skip>false</skip>
                             <outputDirectory>${project.build.directory}/libs</outputDirectory>
+                            <!-- 下面将 powernukkitx 及其相关依赖排除，当然你也可以删掉，所有依赖一起打包 -->
                             <excludeScope>provided</excludeScope>
                         </configuration>
                     </execution>
